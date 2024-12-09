@@ -1,16 +1,28 @@
 import React from "react";
 
-const FormArea = ({ children, backgroundImage, headerHeight, onBubmit }) => {
+interface IFormAreaProps {
+  children: React.ReactNode;
+  onSubmit: (e: any) => void;
+  backgroundImage: string;
+  headerHeight: number;
+}
+
+const FormArea: React.FC<IFormAreaProps> = ({
+  children,
+  onSubmit,
+  backgroundImage,
+  headerHeight = 0,
+}) => {
   const style = {
+    height: `calc(100vh - ${headerHeight}px)`,
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: `calc(100vh - ${headerHeight}px)`,
   }
 
   return (
     <main className="flex justify-center items-center w-screen" style={style}>
-      <form className="bg-white p-8 rounded shadow w-full max-w-sm" onSubmit={onBubmit}>
+      <form className="bg-white p-8 rounded shadow w-full max-w-sm" onSubmit={onSubmit}>
         {children}
       </form>
     </main>
