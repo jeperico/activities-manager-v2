@@ -1,6 +1,6 @@
 import { IUser } from "./user";
 
-export interface IAutenticatedUser {
+export interface IAuthenticatedUser {
   user: IUser
   token: string
   refresh: string
