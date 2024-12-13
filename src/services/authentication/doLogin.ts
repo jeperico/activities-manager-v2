@@ -1,5 +1,5 @@
 import { IAuthenticatedUser } from '../../interfaces/user/authenticateduser'
-import { post } from "../../providers/api";
+import { post } from "../../providers/api.ts";
 import { setCookie } from 'nookies'
 
 export const doLogin = async (

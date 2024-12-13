@@ -10,6 +10,8 @@ import FormArea from './../components/FormContainer.tsx';
 import Input from './../components/Input.tsx';
 import Button from './../components/Button.tsx';
 
+import { doLogin } from '../services/authentication/doLogin.ts';
+
 const loginUserSchema = z.object({
   user: z.string().min(1, 'User is required'),
   password: z.string().min(6, 'Password must be at least 6 characters long'),
@@ -22,9 +24,15 @@ const Login = () => {
     resolver: zodResolver(loginUserSchema),
   });
 
-  const handleLoginUser = (data: LoginUserSchema) => {
-    console.log(data.password);
-    console.log(data.user);
+  const handleLoginUser = async (data: LoginUserSchema) => {
+    try {
+      const response = await doLogin(data.user, data.password)
+      if (response && response.user) {
+        console.log("Usuário logado com sucesso!")
+      }
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
