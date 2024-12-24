@@ -34,7 +34,7 @@ const Login = () => {
   }
 
   return (
-    <FormArea backgroundImage={backgroundImage} headerHeight={0} onSubmit={handleSubmit(handleLoginUser)} >
+    <FormArea backgroundImage={backgroundImage.src} headerHeight={0} onSubmit={handleSubmit(handleLoginUser)} >
       <h1 className='text-sesi text-2xl text-center font-medium'>Welcome!</h1>
       <Input
         label='User:'

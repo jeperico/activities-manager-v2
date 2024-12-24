@@ -1,9 +1,10 @@
 'use client'
 
-import React from 'react'
-import '@/styles/global.css'
-import Header from '@/layout/Header'
-import { usePathname } from "next/navigation"
+import React from 'react';
+import '@/styles/global.css';
+import { Suspense } from 'react';
+import Header from '@/layout/Header';
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
@@ -15,14 +16,22 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body className="min-h-screen">
-        {pathname === '/login' ? (
-          <>{children}</>
-        ) : (
-          <>
-            <Header />
-            {children}
-          </>
-        )}
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center h-screen">
+              <div>Loading...</div>
+            </div>
+          }
+        >
+          {pathname === '/login' ? (
+            <>{children}</>
+          ) : (
+            <>
+              <Header />
+              {children}
+            </>
+          )}
+        </Suspense>
       </body>
     </html>
   )
