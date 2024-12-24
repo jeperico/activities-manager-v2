@@ -1,14 +1,14 @@
+'use client'
+
 import React from 'react';
-import './../global.css';
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-// @ts-ignore
-import backgroundImage from './../assets/background-login.jpg';
-import FormArea from './../components/FormContainer.tsx';
-import Input from './../components/Input.tsx';
-import Button from './../components/Button.tsx';
+import backgroundImage from '@/assets/background-login.jpg';
+import FormArea from '@/components/FormContainer';
+import Input from '@/components/Input';
+import Button from '@/components/Button';
 
 const loginUserSchema = z.object({
   user: z.string().min(1, 'User is required'),

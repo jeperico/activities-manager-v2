@@ -1,9 +1,12 @@
+'use client'
+
 import React from "react";
+import { StaticImageData } from 'next/image';
 
 interface IFormAreaProps {
   children: React.ReactNode;
   onSubmit: (e: any) => void;
-  backgroundImage: string;
+  backgroundImage: string | StaticImageData;
   headerHeight: number;
 }
 
