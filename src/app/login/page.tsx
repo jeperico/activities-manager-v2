@@ -11,8 +11,14 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 
 const loginUserSchema = z.object({
-  user: z.string().min(1, 'User is required'),
-  password: z.string().min(6, 'Password must be at least 6 characters long'),
+  user: z.string({
+    required_error: 'User is required',
+    invalid_type_error: 'User must be a string',
+  }),
+  password: z.string({
+    required_error: 'Password is required',
+    invalid_type_error: 'Password must be a string',
+  }).min(6, 'Password must be at least 6 characters long'),
 });
 
 type LoginUserSchema = z.infer<typeof loginUserSchema>;
