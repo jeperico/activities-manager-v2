@@ -3,16 +3,17 @@ import { post } from "../../providers/api.ts";
 import { setCookie } from 'nookies'
 
 export const doLogin = async (
-  name: string,
+  username: string,
   password: string
 ): Promise<IAuthenticatedUser | undefined> => {
   const body = {
-    name,
+    username,
     password,
   }
 
   try {
     const data = await post('token/', { body })
+    console.log(data)
     const { user, token, refresh } = data
 
     const authenticatedUser: IAuthenticatedUser = {
