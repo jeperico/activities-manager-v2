@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import backgroundImage from '@/assets/background-login.jpg';
+import backgroundImage from '@/public/background-login.jpg';
 import FormArea from '@/components/FormContainer';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
@@ -52,7 +52,7 @@ const Login = () => {
         register={register}
         errors={errors.password}
       />
-      <Button>Login</Button>
+      <Button theme='sesi'>Login</Button>
     </FormArea>
   );
 }
