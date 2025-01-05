@@ -9,12 +9,14 @@ interface IButtonProps {
   children: React.ReactNode;
   theme: Theme;
   link?: string;
+  cn?: string;
 }
 
 const Button: React.FC<IButtonProps> = ({
   children,
   theme,
   link,
+  cn,
 }) => {
   let bgColor = '';
   let hoverColor = '';
@@ -41,17 +43,17 @@ const Button: React.FC<IButtonProps> = ({
   return (
     <>
       {link ? (
-        <Link href={link} className="">
+        <Link href={link}>
           <button
-            className={`w-full ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+            className={`${cn} ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
           >
             {children}
           </button>
         </Link>
       ) : (
         <button
-            className={`mt-4 w-full ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
-          >
+          className={`${cn} ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+        >
           {children}
         </button>
       )}
