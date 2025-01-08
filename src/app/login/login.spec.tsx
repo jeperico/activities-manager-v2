@@ -1,9 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+import React from 'react';
 import Login from './page';
-
-jest.mock('@/public/background-login.jpg', () => null);
 
 describe('Login Form', () => {
   it('should render the login form', () => {
