@@ -7,8 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import backgroundImage from './../../public/background-login.jpg';
 import FormArea from '../../components/FormArea';
-import Input from './../../components/Input';
-import Button from './../../components/Button';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 // import backgroundImage from '@/public/background-login.jpg';
 // import FormArea from '@/components/FormContainer';
 // import Input from '@/components/Input';
@@ -25,7 +25,7 @@ const loginUserSchema = z.object({
 
 type LoginUserSchema = z.infer<typeof loginUserSchema>;
 
-const Login = () => {
+const LoginForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginUserSchema>({
     resolver: zodResolver(loginUserSchema),
   });
@@ -59,4 +59,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default LoginForm;
