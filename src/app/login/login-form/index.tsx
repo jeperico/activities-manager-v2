@@ -5,14 +5,18 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import backgroundImage from './../../public/background-login.jpg';
-import FormArea from '../../components/FormArea';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
+import backgroundImage from './../../../public/background-login.jpg';
+import FormArea from './../../../components/FormArea';
+import Input from './../../../components/Input';
+import Button from './../../../components/Button';
 // import backgroundImage from '@/public/background-login.jpg';
 // import FormArea from '@/components/FormContainer';
 // import Input from '@/components/Input';
 // import Button from '@/components/Button';
+
+interface ILoginFormProps {
+  handleLoginUser: (data: LoginUserSchema) => void;
+}
 
 const loginUserSchema = z.object({
   user: z.string().min(2, {
@@ -23,17 +27,14 @@ const loginUserSchema = z.object({
   }),
 });
 
-type LoginUserSchema = z.infer<typeof loginUserSchema>;
+export type LoginUserSchema = z.infer<typeof loginUserSchema>;
 
-const LoginForm = () => {
+const LoginForm: React.FC<ILoginFormProps> = ({
+  handleLoginUser,
+}) => {
   const { register, handleSubmit, formState: { errors } } = useForm<LoginUserSchema>({
     resolver: zodResolver(loginUserSchema),
   });
-
-  const handleLoginUser = (data: LoginUserSchema) => {
-    console.log(data.password);
-    console.log(data.user);
-  }
 
   return (
     <FormArea backgroundImage={backgroundImage.src} headerHeight={0} onSubmit={handleSubmit(handleLoginUser)} >

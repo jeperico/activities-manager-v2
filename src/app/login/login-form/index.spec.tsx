@@ -4,6 +4,7 @@ import { faker } from '@faker-js/faker';
 import '@testing-library/jest-dom';
 
 import Login from '../page';
+import LoginForm from '.';
 
 
 
@@ -75,15 +76,14 @@ describe('Login Form', () => {
     });
   });
 
-  it.only('should call the handleLoginUser function when the form is submitted', async () => {
+  it('should call the handleLoginUser function when the form is submitted', async () => {
     // Arrange
     const mockHandleLoginUser = jest.fn();
-    jest.spyOn(Login.prototype, 'handleLoginUser').mockImplementation(mockHandleLoginUser);
-    render(<Login />);
+    render(<LoginForm handleLoginUser={mockHandleLoginUser} />);
 
     // Act
     const person = {
-      name: faker.person.firstName(),
+      user: faker.person.firstName(),
       password: faker.string.alphanumeric(8)
     }
     const buttonSubmit = screen.getByText(/login/i);
@@ -91,7 +91,7 @@ describe('Login Form', () => {
     const inputPassword = screen.getByPlaceholderText(/password/i);
 
     act(() => {
-      fireEvent.change(inputName, { target: { value: person.name } });
+      fireEvent.change(inputName, { target: { value: person.user } });
       fireEvent.change(inputPassword, { target: { value: person.password } });
       fireEvent.click(buttonSubmit);
     })
