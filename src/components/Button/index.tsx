@@ -8,6 +8,7 @@ type Theme = 'sesi' | 'green' | 'red' | 'yellow';
 interface IButtonProps {
   children: React.ReactNode;
   theme: Theme;
+  onClick?: () => void;
   link?: string;
   cn?: string;
 }
@@ -15,6 +16,7 @@ interface IButtonProps {
 const Button: React.FC<IButtonProps> = ({
   children,
   theme,
+  onClick,
   link,
   cn,
 }) => {
@@ -53,6 +55,7 @@ const Button: React.FC<IButtonProps> = ({
       ) : (
         <button
           className={`${cn} ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+          onClick={onClick}
         >
           {children}
         </button>
