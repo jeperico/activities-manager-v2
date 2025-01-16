@@ -9,10 +9,6 @@ import backgroundImage from './../../../public/background-login.jpg';
 import FormArea from './../../../components/FormArea';
 import Input from './../../../components/Input';
 import Button from './../../../components/Button';
-// import backgroundImage from '@/public/background-login.jpg';
-// import FormArea from '@/components/FormContainer';
-// import Input from '@/components/Input';
-// import Button from '@/components/Button';
 
 interface ILoginFormProps {
   handleLoginUser: (data: LoginUserSchema) => void;

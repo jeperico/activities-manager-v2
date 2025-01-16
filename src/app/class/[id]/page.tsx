@@ -24,6 +24,7 @@ const Class = ({ params }: {
     },
   ];
   const current = data.find((item) => item.id === params.id);
+  console.log(current);
 
   const dataClass: Array<ITableRow> = [
     {

@@ -17,7 +17,7 @@ describe('Form Area', () => {
       console.log(data.password);
       console.log(data.user);
     }
-    render(<FormArea onSubmit={handleLoginUser} backgroundImage={''} headerHeight={0}><p>Form Area</p></FormArea>);
+    render(<FormArea onSubmit={handleLoginUser}><p>Form Area</p></FormArea>);
 
     // Act
     const formArea = screen.getByText('Form Area');
@@ -26,10 +26,10 @@ describe('Form Area', () => {
     expect(formArea).toBeVisible();
   });
 
-  it.only('should call onSubmit when form is submitted', () => {
+  it('should call onSubmit when form is submitted', () => {
     // Arrange
     const mockHandleSubmit = jest.fn();
-    render(<FormArea onSubmit={mockHandleSubmit} backgroundImage={''} headerHeight={0}><button type="submit">Submit</button></FormArea>);
+    render(<FormArea onSubmit={mockHandleSubmit}><button type="submit">Submit</button></FormArea>);
 
     // Act
     const submitButton = screen.getByText('Submit');
@@ -43,7 +43,7 @@ describe('Form Area', () => {
 
   it('should render children elements', () => {
     // Arrange
-    render(<FormArea onSubmit={() => {}} backgroundImage={''} headerHeight={0}><p>Child Element</p></FormArea>);
+    render(<FormArea onSubmit={() => {}}><p>Child Element</p></FormArea>);
 
     // Act
     const childElement = screen.getByText('Child Element');

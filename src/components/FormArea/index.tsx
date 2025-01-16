@@ -6,21 +6,23 @@ import { StaticImageData } from 'next/image';
 interface IFormAreaProps {
   children: React.ReactNode;
   onSubmit: (e: any) => void;
-  backgroundImage: string | StaticImageData;
-  headerHeight: number;
+  headerHeight?: number;
+  backgroundImage?: string | StaticImageData;
 }
 
 const FormArea: React.FC<IFormAreaProps> = ({
   children,
   onSubmit,
-  backgroundImage,
   headerHeight = 0,
+  backgroundImage,
 }) => {
-  const style = {
+  const style = backgroundImage ?{
     height: `calc(100vh - ${headerHeight}px)`,
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+  } : {
+    height: `calc(100vh - ${headerHeight}px)`,
   }
 
   return (
