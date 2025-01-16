@@ -1,9 +1,14 @@
-import { render, screen } from '@testing-library/react';
+/* eslint-disable testing-library/no-unnecessary-act */
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { jest } from '@jest/globals';
 
 import FormArea from '.';
 import { LoginUserSchema } from '@/app/login/login-form';
 
+beforeAll(() => {
+  HTMLFormElement.prototype.submit = jest.fn();
+});
 
 describe('Form Area', () => {
   it('should render the form area', () => {
@@ -19,5 +24,31 @@ describe('Form Area', () => {
 
     // Assert
     expect(formArea).toBeVisible();
+  });
+
+  it.only('should call onSubmit when form is submitted', () => {
+    // Arrange
+    const mockHandleSubmit = jest.fn();
+    render(<FormArea onSubmit={mockHandleSubmit} backgroundImage={''} headerHeight={0}><button type="submit">Submit</button></FormArea>);
+
+    // Act
+    const submitButton = screen.getByText('Submit');
+    act(() => {
+      fireEvent.submit(submitButton);
+    });
+
+    // Assert
+    expect(mockHandleSubmit).toHaveBeenCalled();
+  });
+
+  it('should render children elements', () => {
+    // Arrange
+    render(<FormArea onSubmit={() => {}} backgroundImage={''} headerHeight={0}><p>Child Element</p></FormArea>);
+
+    // Act
+    const childElement = screen.getByText('Child Element');
+
+    // Assert
+    expect(childElement).toBeVisible();
   });
 });
