@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Class Component matches snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="w-main m-auto max-w-mainx py-10"
+  >
+    <div
+      class="flex justify-end mb-4"
+    >
+      <button
+        class="w-fit bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Add Activity
+      </button>
+    </div>
+    <div
+      class="bg-white p-8 rounded shadow w-full"
+    >
+      <h2
+        class="text-xl mb-4 text-center font-bold"
+      >
+        Activities List
+      </h2>
+      <table
+        class="min-w-full bg-white"
+      >
+        <thead>
+          <tr>
+            <th
+              class="py-2"
+            >
+              Númber
+            </th>
+            <th
+              class="py-2"
+            >
+              Activity Name
+            </th>
+            <th
+              class="py-2"
+            >
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              1
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              acerbitas
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              2
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              theologus
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              3
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              ademptio
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Class matches snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="w-main m-auto max-w-mainx py-10"
+  >
+    <div
+      class="flex justify-end mb-4"
+    >
+      <button
+        class="w-fit bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Add Activity
+      </button>
+    </div>
+    <div
+      class="bg-white p-8 rounded shadow w-full"
+    >
+      <h2
+        class="text-xl mb-4 text-center font-bold"
+      >
+        Activities List
+      </h2>
+      <table
+        class="min-w-full bg-white"
+      >
+        <thead>
+          <tr>
+            <th
+              class="py-2"
+            >
+              Númber
+            </th>
+            <th
+              class="py-2"
+            >
+              Activity Name
+            </th>
+            <th
+              class="py-2"
+            >
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              1
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              nemo
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              2
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              corrumpo
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="py-2 text-center"
+            >
+              3
+            </td>
+            <td
+              class="py-2 text-center"
+            >
+              dens
+            </td>
+            <td
+              class="py-2 text-center flex justify-center gap-2"
+            >
+              <a
+                href="/class/123"
+              >
+                <button
+                  class="px-2 py-1 bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Vizualize
+                </button>
+              </a>
+              <button
+                class="px-2 py-1 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Class should matche snapshot 1`] = `
+<DocumentFragment>
+  <main
+    class="w-main m-auto max-w-mainx py-10"
+  >
+    <div
+      class="flex justify-end mb-4"
+    >
+      <button>
+        Mocked Button
+      </button>
+    </div>
+    <div>
+      Mocked Table
+    </div>
+  </main>
+</DocumentFragment>
+`;
