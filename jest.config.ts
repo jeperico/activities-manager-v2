@@ -1,4 +1,4 @@
-import type { Config } from "@jest/types";
+import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
@@ -6,9 +6,9 @@ const config: Config.InitialOptions = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/src/$1",
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   testEnvironment: 'jsdom',
-}
+};
 
 export default config;

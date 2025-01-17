@@ -1,16 +1,10 @@
-
-
 interface ITableHeaderProps {
   col1: string;
   col2: string;
   col3: string;
 }
 
-const TableHeader: React.FC<ITableHeaderProps> = ({
-  col1,
-  col2,
-  col3
-}) => {
+const TableHeader: React.FC<ITableHeaderProps> = ({ col1, col2, col3 }) => {
   return (
     <thead>
       <tr>

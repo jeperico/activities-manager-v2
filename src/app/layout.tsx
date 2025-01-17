@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import '@/styles/global.css';
@@ -9,10 +9,10 @@ import { usePathname } from 'next/navigation';
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const pathname = usePathname()
-  return(
+  const pathname = usePathname();
+  return (
     <html suppressHydrationWarning lang="en">
       <head />
       <body className="min-h-screen">
@@ -34,5 +34,5 @@ export default function RootLayout({
         </Suspense>
       </body>
     </html>
-  )
+  );
 }

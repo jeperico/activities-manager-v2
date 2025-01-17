@@ -5,6 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disables the Image Optimization API.
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
