@@ -1,3 +1,5 @@
+import React from "react";
+
 interface ITableHeaderProps {
   col1: string;
   col2: string;
