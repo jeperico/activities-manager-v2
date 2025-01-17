@@ -21,7 +21,13 @@ const TableBody: React.FC<ITableBodyProps> = ({ data }) => {
             <Button theme="yellow" link="/class/123" cn="px-2 py-1">
               Vizualize
             </Button>
-            {/* <Button theme="yellow" link={`/class/${row.id}`} cn="px-2 py-1">Vizualize</Button> */}
+            {/* <Button
+              theme='yellow'
+              link={`/class/${row.id}`}
+              cn='px-2 py-1'
+            >
+              Vizualize
+            </Button> */}
             <Button
               theme="red"
               cn="px-2 py-1"

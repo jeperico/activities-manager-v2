@@ -1,17 +1,22 @@
 "use client";
 
 import React from "react";
-import { faker } from "@faker-js/faker";
+// import { faker } from '@faker-js/faker';
 import { ITableRow } from "@/interfaces/table-row";
 
 import Button from "@/components/Button";
 import Table from "@/components/Table";
 
 const Home = () => {
-  const data: Array<ITableRow> = Array.from({ length: 10 }, () => ({
-    id: faker.string.uuid(),
-    name: faker.commerce.department(),
-  }));
+  // const data: Array<ITableRow> = Array.from({ length: 10 }, () => ({
+  //   id: faker.string.uuid(),
+  //   name: faker.commerce.department(),
+  // }));
+  const data: Array<ITableRow> = [
+    { id: "1", name: "Electronics" },
+    { id: "2", name: "Clothing" },
+    { id: "3", name: "Home" },
+  ];
 
   return (
     <main className="w-main m-auto max-w-mainx py-10">
