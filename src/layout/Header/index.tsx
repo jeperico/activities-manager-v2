@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import React from 'react';
-import Logo from '@/public/logo.png';
-import Button from '@/components/Button';
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import Logo from "@/public/logo.png";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 const Header = () => {
   const returnHome = true;

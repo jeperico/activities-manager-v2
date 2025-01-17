@@ -1,16 +1,16 @@
-import { jest } from '@jest/globals';
-import '@testing-library/jest-dom';
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { jest } from "@jest/globals";
+import "@testing-library/jest-dom";
+import { act, fireEvent, render, screen } from "@testing-library/react";
 
-import { LoginUserSchema } from '@/app/login/login-form';
-import FormArea from '.';
+import { LoginUserSchema } from "@/app/login/login-form";
+import FormArea from ".";
 
 beforeAll(() => {
   HTMLFormElement.prototype.submit = jest.fn();
 });
 
-describe('Form Area', () => {
-  it('should render the form area', () => {
+describe("Form Area", () => {
+  it("should render the form area", () => {
     // Arrange
     const handleLoginUser = (data: LoginUserSchema) => {
       console.log(data.password);
@@ -19,27 +19,27 @@ describe('Form Area', () => {
     render(
       <FormArea onSubmit={handleLoginUser}>
         <p>Form Area</p>
-      </FormArea>
+      </FormArea>,
     );
 
     // Act
-    const formArea = screen.getByText('Form Area');
+    const formArea = screen.getByText("Form Area");
 
     // Assert
     expect(formArea).toBeVisible();
   });
 
-  it('should call onSubmit when form is submitted', () => {
+  it("should call onSubmit when form is submitted", () => {
     // Arrange
     const mockHandleSubmit = jest.fn();
     render(
       <FormArea onSubmit={mockHandleSubmit}>
         <button type="submit">Submit</button>
-      </FormArea>
+      </FormArea>,
     );
 
     // Act
-    const submitButton = screen.getByText('Submit');
+    const submitButton = screen.getByText("Submit");
     act(() => {
       fireEvent.submit(submitButton);
     });
@@ -48,16 +48,16 @@ describe('Form Area', () => {
     expect(mockHandleSubmit).toHaveBeenCalled();
   });
 
-  it('should render children elements', () => {
+  it("should render children elements", () => {
     // Arrange
     render(
       <FormArea onSubmit={() => {}}>
         <p>Child Element</p>
-      </FormArea>
+      </FormArea>,
     );
 
     // Act
-    const childElement = screen.getByText('Child Element');
+    const childElement = screen.getByText("Child Element");
 
     // Assert
     expect(childElement).toBeVisible();

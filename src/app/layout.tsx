@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React from 'react';
-import '@/styles/global.css';
-import { Suspense } from 'react';
-import Header from '@/layout/Header';
-import { usePathname } from 'next/navigation';
+import React from "react";
+import "@/styles/global.css";
+import { Suspense } from "react";
+import Header from "@/layout/Header";
+import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
@@ -23,7 +23,7 @@ export default function RootLayout({
             </div>
           }
         >
-          {pathname === '/login' ? (
+          {pathname === "/login" ? (
             <>{children}</>
           ) : (
             <>

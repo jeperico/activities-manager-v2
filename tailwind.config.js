@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        sesi: '#0056b3',
+        sesi: "#0056b3",
       },
       spacing: {
-        main: '90vw',
-        mainmx: '1240px',
+        main: "90vw",
+        mainmx: "1240px",
       },
       gridTemplateColumns: {
-        header: 'repeat(3, 1fr)',
+        header: "repeat(3, 1fr)",
       },
     },
   },

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import AddClassForm, { AddClassSchema } from './add-class-form';
+import AddClassForm, { AddClassSchema } from "./add-class-form";
 
 const AddClass = () => {
   const handleClassName = (data: AddClassSchema) => {

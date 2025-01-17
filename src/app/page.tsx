@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { faker } from '@faker-js/faker';
-import { ITableRow } from '@/interfaces/table-row';
+import React from "react";
+import { faker } from "@faker-js/faker";
+import { ITableRow } from "@/interfaces/table-row";
 
-import Button from '@/components/Button';
-import Table from '@/components/Table';
+import Button from "@/components/Button";
+import Table from "@/components/Table";
 
 const Home = () => {
   const data: Array<ITableRow> = Array.from({ length: 10 }, () => ({
