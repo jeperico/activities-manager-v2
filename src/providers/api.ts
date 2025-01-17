@@ -33,4 +33,8 @@ const httpRequest = async (
   }
 };
 
-console.log(httpRequest("users", "GET"));
+// console.log(httpRequest('users', 'GET'));
+
+export const get = (uri: string, params?: IPostRequestParams) => {
+  return httpRequest(uri, "GET", params);
+};
