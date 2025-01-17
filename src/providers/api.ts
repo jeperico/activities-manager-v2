@@ -33,8 +33,22 @@ const httpRequest = async (
   }
 };
 
-// console.log(httpRequest('users', 'GET'));
-
 export const get = (uri: string, params?: IPostRequestParams) => {
   return httpRequest(uri, "GET", params);
+};
+
+export const post = (uri: string, params?: IPostRequestParams) => {
+  return httpRequest(uri, "POST", params);
+};
+
+export const put = (uri: string, params?: IPostRequestParams) => {
+  return httpRequest(uri, "PUT", params);
+};
+
+export const patch = (uri: string, params?: IPostRequestParams) => {
+  return httpRequest(uri, "PATCH", params);
+};
+
+export const del = (uri: string, params?: IPostRequestParams) => {
+  return httpRequest(uri, "DELETE", params);
 };
