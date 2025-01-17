@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import { ITableRow } from '@/interfaces/table-row';
-import TableBody from './body';
-import TableHeader from './header';
+import { ITableRow } from "@/interfaces/table-row";
+import TableBody from "./body";
+import TableHeader from "./header";
 
 interface ITableProps {
   title: string;

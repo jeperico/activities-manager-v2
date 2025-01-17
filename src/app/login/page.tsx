@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-import LoginForm, { LoginUserSchema } from './login-form';
+import LoginForm, { LoginUserSchema } from "./login-form";
 
 const Login = () => {
   const handleLoginUser = (data: LoginUserSchema) => {

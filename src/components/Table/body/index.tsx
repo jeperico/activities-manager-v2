@@ -1,5 +1,6 @@
-import Button from './../../Button';
-import { ITableRow } from '@/interfaces/table-row';
+import React from "react";
+import Button from "./../../Button";
+import { ITableRow } from "@/interfaces/table-row";
 
 interface ITableBodyProps {
   data: Array<ITableRow>;

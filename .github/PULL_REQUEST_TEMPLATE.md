@@ -1,18 +1,16 @@
-# PR#{###}: {branch-origin} para {branch-target}.
+CONVENTIONAL-TYPE: DESCRIPTION
 
-{resumo contendo objetivo da branch, objetivo alcançado, features que envolveu}.
+# _branch-origin merge to branch-target_.
+
+**_Objetivo Principal:_** DESCRIPTION.
 
 ## O que foi feito:
 
-**_{topic}:_** {description}.
-{image(s)}
+**_TOPIC:_** DESCRIPTION.
+IMAGE
 
-**_{topic}:_** {description}.
-{image(s)}
+**_TOPIC:_** DESCRIPTION.
+IMAGE
 
-**_{topic}:_** {description}.
-{image(s)}
-
-### Commits:
-
-{commit-01}; {commit-02}; {commit-03}; ... {commit-xx}.
+**_TOPIC:_** DESCRIPTION.
+IMAGE

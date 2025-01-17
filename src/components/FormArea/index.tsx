@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import { StaticImageData } from 'next/image';
-import React from 'react';
+import { StaticImageData } from "next/image";
+import React from "react";
 
 interface IFormAreaProps {
   children: React.ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (e: any) => void;
   headerHeight?: number;
   backgroundImage?: string | StaticImageData;
@@ -20,8 +21,8 @@ const FormArea: React.FC<IFormAreaProps> = ({
     ? {
         height: `calc(100vh - ${headerHeight}px)`,
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }
     : {
         height: `calc(100vh - ${headerHeight}px)`,

@@ -1,7 +1,8 @@
-import Button from './../../../components/Button';
-import Table from './../../../components/Table';
-import { ITableRow } from '@/interfaces/table-row';
-import { faker } from '@faker-js/faker';
+import React from "react";
+import { ITableRow } from "@/interfaces/table-row";
+import { faker } from "@faker-js/faker";
+import Button from "./../../../components/Button";
+import Table from "./../../../components/Table";
 
 const Class = ({
   params,
@@ -12,15 +13,15 @@ const Class = ({
 }) => {
   const data: Array<ITableRow> = [
     {
-      id: '123',
+      id: "123",
       name: faker.commerce.department(),
     },
     {
-      id: '234',
+      id: "234",
       name: faker.commerce.department(),
     },
     {
-      id: '345',
+      id: "345",
       name: faker.commerce.department(),
     },
   ];

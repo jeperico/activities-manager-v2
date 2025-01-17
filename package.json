@@ -16,8 +16,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --watchAll=false",
+    "eject": "react-scripts eject",
+    "prepare": "husky",
+    "lint": "prettier . --write && eslint src --fix"
   },
   "browserslist": {
     "production": [
@@ -49,6 +51,7 @@
     "eslint-plugin-prettier": "^5.2.2",
     "eslint-plugin-react": "^7.37.4",
     "globals": "^15.14.0",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^26.0.0",

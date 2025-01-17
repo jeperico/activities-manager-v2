@@ -1,30 +1,31 @@
-import { faker } from '@faker-js/faker';
-import '@testing-library/jest-dom';
+import React from "react";
+import { faker } from "@faker-js/faker";
+import "@testing-library/jest-dom";
 import {
   act,
   fireEvent,
   render,
   screen,
   waitFor,
-} from '@testing-library/react';
+} from "@testing-library/react";
 
-import LoginForm from '.';
-import Login from '../page';
+import LoginForm from ".";
+import Login from "../page";
 
-describe('Login Form', () => {
-  it('should render the login form', () => {
+describe("Login Form", () => {
+  it("should render the login form", () => {
     render(<Login />);
-    const formTitle = screen.getByRole('heading', { name: /welcome/i });
-    const inputName = screen.getByRole('textbox', { name: /user/i });
+    const formTitle = screen.getByRole("heading", { name: /welcome/i });
+    const inputName = screen.getByRole("textbox", { name: /user/i });
     const inputPassword = screen.getByPlaceholderText(/password/i);
-    const buttonSubmit = screen.getByRole('button', { name: /login/i });
+    const buttonSubmit = screen.getByRole("button", { name: /login/i });
     expect(formTitle).toBeVisible();
     expect(inputName).toBeVisible();
     expect(inputPassword).toBeVisible();
     expect(buttonSubmit).toBeVisible();
   });
 
-  it('should show an error message when fields are not provided', async () => {
+  it("should show an error message when fields are not provided", async () => {
     render(<Login />);
     const buttonSubmit = screen.getByText(/login/i);
     act(() => {
@@ -32,53 +33,53 @@ describe('Login Form', () => {
     });
     await waitFor(() => {
       expect(
-        screen.getByText('User must be at least 2 characters long')
+        screen.getByText("User must be at least 2 characters long"),
       ).toBeVisible();
     });
     await waitFor(() => {
       expect(
-        screen.getByText('Password must be at least 6 characters long')
+        screen.getByText("Password must be at least 6 characters long"),
       ).toBeVisible();
     });
   });
 
-  it('should show an error message when an invalid user is provided', async () => {
+  it("should show an error message when an invalid user is provided", async () => {
     render(<Login />);
     const buttonSubmit = screen.getByText(/login/i);
-    const inputName = screen.getByRole('textbox', { name: /user/i });
+    const inputName = screen.getByRole("textbox", { name: /user/i });
     const inputPassword = screen.getByPlaceholderText(/password/i);
-    fireEvent.change(inputName, { target: { value: 'a' } });
+    fireEvent.change(inputName, { target: { value: "a" } });
     fireEvent.change(inputPassword, {
       target: { value: faker.string.alphanumeric(8) },
     });
     fireEvent.click(buttonSubmit);
     await waitFor(() => {
       expect(
-        screen.getByText('User must be at least 2 characters long')
+        screen.getByText("User must be at least 2 characters long"),
       ).toBeVisible();
     });
   });
 
-  it('should show an error message when an invalid password is provided', async () => {
+  it("should show an error message when an invalid password is provided", async () => {
     render(<Login />);
     const buttonSubmit = screen.getByText(/login/i);
-    const inputName = screen.getByRole('textbox', { name: /user/i });
+    const inputName = screen.getByRole("textbox", { name: /user/i });
     const inputPassword = screen.getByPlaceholderText(/password/i);
     act(() => {
       fireEvent.change(inputName, {
         target: { value: faker.person.firstName() },
       });
-      fireEvent.change(inputPassword, { target: { value: '12345' } });
+      fireEvent.change(inputPassword, { target: { value: "12345" } });
       fireEvent.click(buttonSubmit);
     });
     await waitFor(() => {
       expect(
-        screen.getByText('Password must be at least 6 characters long')
+        screen.getByText("Password must be at least 6 characters long"),
       ).toBeVisible();
     });
   });
 
-  it('should call the handleLoginUser function when the form is submitted', async () => {
+  it("should call the handleLoginUser function when the form is submitted", async () => {
     const mockHandleLoginUser = jest.fn();
     render(<LoginForm handleLoginUser={mockHandleLoginUser} />);
     const person = {
@@ -86,7 +87,7 @@ describe('Login Form', () => {
       password: faker.string.alphanumeric(8),
     };
     const buttonSubmit = screen.getByText(/login/i);
-    const inputName = screen.getByRole('textbox', { name: /user/i });
+    const inputName = screen.getByRole("textbox", { name: /user/i });
     const inputPassword = screen.getByPlaceholderText(/password/i);
     act(() => {
       fireEvent.change(inputName, { target: { value: person.user } });
@@ -95,12 +96,12 @@ describe('Login Form', () => {
     });
     await waitFor(() => {
       expect(
-        screen.queryByText('User must be at least 2 characters long')
+        screen.queryByText("User must be at least 2 characters long"),
       ).not.toBeInTheDocument();
     });
     await waitFor(() => {
       expect(
-        screen.queryByText('Password must be at least 6 characters long')
+        screen.queryByText("Password must be at least 6 characters long"),
       ).not.toBeInTheDocument();
     });
     await waitFor(() => {

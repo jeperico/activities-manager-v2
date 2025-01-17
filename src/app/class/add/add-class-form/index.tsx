@@ -1,10 +1,11 @@
-import { z } from 'zod';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import React from "react";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import Button from './../../../../components/Button';
-import FormArea from './../../../../components/FormArea';
-import Input from './../../../../components/Input';
+import Button from "./../../../../components/Button";
+import FormArea from "./../../../../components/FormArea";
+import Input from "./../../../../components/Input";
 
 interface IAddClassFormProps {
   handleClassName: (data: AddClassSchema) => void;
@@ -12,7 +13,7 @@ interface IAddClassFormProps {
 
 const addClassSchema = z.object({
   class: z.string().min(2, {
-    message: 'Class must be at least 2 characters long',
+    message: "Class must be at least 2 characters long",
   }),
 });
 

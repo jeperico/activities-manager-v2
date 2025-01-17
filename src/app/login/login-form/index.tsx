@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import backgroundImage from './../../../public/background-login.jpg';
-import FormArea from './../../../components/FormArea';
-import Input from './../../../components/Input';
-import Button from './../../../components/Button';
+import backgroundImage from "./../../../public/background-login.jpg";
+import FormArea from "./../../../components/FormArea";
+import Input from "./../../../components/Input";
+import Button from "./../../../components/Button";
 
 interface ILoginFormProps {
   handleLoginUser: (data: LoginUserSchema) => void;
@@ -16,10 +16,10 @@ interface ILoginFormProps {
 
 const loginUserSchema = z.object({
   user: z.string().min(2, {
-    message: 'User must be at least 2 characters long',
+    message: "User must be at least 2 characters long",
   }),
   password: z.string().min(6, {
-    message: 'Password must be at least 6 characters long',
+    message: "Password must be at least 6 characters long",
   }),
 });
 

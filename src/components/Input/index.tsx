@@ -1,22 +1,23 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { FieldError, UseFormRegister } from 'react-hook-form';
+import React from "react";
+import { FieldError, UseFormRegister } from "react-hook-form";
 
 interface IInputProps {
   name: string;
   label: string;
   type: string;
   placeholder: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   register: UseFormRegister<any>;
   errors: FieldError | undefined;
 }
 
 const Input: React.FC<IInputProps> = ({
-  name = 'input',
-  label = 'Input:',
-  type = 'text',
-  placeholder = 'Enter your input...',
+  name = "input",
+  label = "Input:",
+  type = "text",
+  placeholder = "Enter your input...",
   register,
   errors,
 }) => {
