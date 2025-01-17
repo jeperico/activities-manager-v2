@@ -4,13 +4,13 @@
 
 ## O que foi feito:
 
-***{topic}:*** {description}.
+**_{topic}:_** {description}.
 {image(s)}
 
-***{topic}:*** {description}.
+**_{topic}:_** {description}.
 {image(s)}
 
-***{topic}:*** {description}.
+**_{topic}:_** {description}.
 {image(s)}
 
 ### Commits:

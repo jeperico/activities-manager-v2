@@ -11,10 +11,7 @@ describe('Button', () => {
 
   it('should render the button with a link', () => {
     render(
-      <Button
-        theme="sesi"
-        link="/home"
-      >
+      <Button theme="sesi" link="/home">
         Click me
       </Button>
     );
@@ -24,10 +21,7 @@ describe('Button', () => {
 
   it('should render the button with a custom class', () => {
     render(
-      <Button
-        theme="sesi"
-        cn="custom-class"
-      >
+      <Button theme="sesi" cn="custom-class">
         Click me
       </Button>
     );
@@ -55,10 +49,7 @@ describe('Button', () => {
 
   it('should render a link with the correct href', () => {
     render(
-      <Button
-        theme="sesi"
-        link="/about"
-      >
+      <Button theme="sesi" link="/about">
         Click me
       </Button>
     );

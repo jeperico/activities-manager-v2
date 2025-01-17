@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ITableRow } from "@/interfaces/table-row";
+import { ITableRow } from '@/interfaces/table-row';
 import { faker } from '@faker-js/faker';
 import '@testing-library/jest-dom';
 
@@ -11,17 +11,17 @@ describe('Table', () => {
     const data: Array<ITableRow> = [
       {
         id: faker.string.uuid(),
-        name: "Class 1",
+        name: 'Class 1',
       },
       {
         id: faker.string.uuid(),
-        name: "Class 2",
+        name: 'Class 2',
       },
     ];
     render(<Table title="Class List" name="Class Name" data={data} />);
 
     // Act
-    const tableTitle = screen.getByRole('heading', {name: /class list/i});
+    const tableTitle = screen.getByRole('heading', { name: /class list/i });
     const table = screen.getByRole('table');
 
     // Assert
@@ -34,11 +34,11 @@ describe('Table', () => {
     const data: Array<ITableRow> = [
       {
         id: faker.string.uuid(),
-        name: "Class 1",
+        name: 'Class 1',
       },
       {
         id: faker.string.uuid(),
-        name: "Class 2",
+        name: 'Class 2',
       },
     ];
     render(<Table title="Class List" name="Class Name" data={data} />);
@@ -55,11 +55,11 @@ describe('Table', () => {
     const data: Array<ITableRow> = [
       {
         id: faker.string.uuid(),
-        name: "Class 1",
+        name: 'Class 1',
       },
       {
         id: faker.string.uuid(),
-        name: "Class 2",
+        name: 'Class 2',
       },
     ];
     render(<Table title="Class List" name="Class Name" data={data} />);

@@ -1,25 +1,26 @@
-import Button from "./../../../components/Button";
-import Table from "./../../../components/Table";
-import { ITableRow } from "@/interfaces/table-row";
-import { faker } from "@faker-js/faker";
+import Button from './../../../components/Button';
+import Table from './../../../components/Table';
+import { ITableRow } from '@/interfaces/table-row';
+import { faker } from '@faker-js/faker';
 
-
-const Class = ({ params }: {
+const Class = ({
+  params,
+}: {
   params: {
     id: string;
-  }
+  };
 }) => {
   const data: Array<ITableRow> = [
     {
-      id: "123",
+      id: '123',
       name: faker.commerce.department(),
     },
     {
-      id: "234",
+      id: '234',
       name: faker.commerce.department(),
     },
     {
-      id: "345",
+      id: '345',
       name: faker.commerce.department(),
     },
   ];
@@ -44,11 +45,13 @@ const Class = ({ params }: {
   return (
     <main className="w-main m-auto max-w-mainx py-10">
       <div className="flex justify-end mb-4">
-        <Button theme="green" cn="w-fit">Add Activity</Button>
+        <Button theme="green" cn="w-fit">
+          Add Activity
+        </Button>
       </div>
       <Table title="Activities List" name="Activity Name" data={dataClass} />
     </main>
   );
-}
+};
 
 export default Class;

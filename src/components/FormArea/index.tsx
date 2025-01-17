@@ -28,10 +28,7 @@ const FormArea: React.FC<IFormAreaProps> = ({
       };
 
   return (
-    <main
-      className="flex justify-center items-center w-screen"
-      style={style}
-    >
+    <main className="flex justify-center items-center w-screen" style={style}>
       <form
         className="bg-white p-8 rounded shadow w-full max-w-sm"
         onSubmit={onSubmit}
