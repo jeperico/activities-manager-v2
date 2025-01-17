@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import React from "react";
+import React from 'react';
 
-import { ITableRow } from "@/interfaces/table-row";
-import TableHeader from "./header";
-import TableBody from "./body";
+import { ITableRow } from '@/interfaces/table-row';
+import TableBody from './body';
+import TableHeader from './header';
 
 interface ITableProps {
   title: string;
@@ -12,12 +12,7 @@ interface ITableProps {
   data: Array<ITableRow>;
 }
 
-const Table: React.FC<ITableProps> = ({
-  title,
-  name,
-  data,
-}) => {
-
+const Table: React.FC<ITableProps> = ({ title, name, data }) => {
   return (
     <div className="bg-white p-8 rounded shadow w-full">
       <h2 className="text-xl mb-4 text-center font-bold">{title}</h2>
@@ -26,7 +21,7 @@ const Table: React.FC<ITableProps> = ({
         <TableBody data={data} />
       </table>
     </div>
-  )
+  );
 };
 
 export default Table;

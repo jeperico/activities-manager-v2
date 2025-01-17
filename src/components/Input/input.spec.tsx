@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import Input from '.';
 
@@ -17,7 +17,7 @@ describe('Input', () => {
     render(<Input {...props} />);
 
     // Act
-    const input = screen.getByRole('textbox', {name: /input/i});
+    const input = screen.getByRole('textbox', { name: /input/i });
     const label = screen.getByText(/input:/i);
 
     // Assert
@@ -38,7 +38,7 @@ describe('Input', () => {
     render(<Input {...props} />);
 
     // Act
-    const input = screen.getByRole('textbox', {name: /input/i});
+    const input = screen.getByRole('textbox', { name: /input/i });
     const label = screen.getByText(/input:/i);
     const error = screen.getByText('This is an error');
 
@@ -62,7 +62,7 @@ describe('Input', () => {
     render(<Input {...props} />);
 
     // Act
-    const input = screen.getByRole('textbox', {name: /input/i});
+    const input = screen.getByRole('textbox', { name: /input/i });
     fireEvent.change(input, { target: { value: 'test' } });
 
     // Assert

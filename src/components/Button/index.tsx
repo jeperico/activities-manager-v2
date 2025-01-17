@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
-import React from "react";
-import Link from "next/link";
+import Link from 'next/link';
+import React from 'react';
 
 type Theme = 'sesi' | 'green' | 'red' | 'yellow';
 
@@ -47,14 +47,18 @@ const Button: React.FC<IButtonProps> = ({
       {link ? (
         <Link href={link}>
           <button
-            className={`${cn} ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+            className={`${cn} ${bgColor} ${
+              'hover:' + hoverColor
+            } text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
           >
             {children}
           </button>
         </Link>
       ) : (
         <button
-          className={`${cn} ${bgColor} ${'hover:' + hoverColor} text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
+          className={`${cn} ${bgColor} ${
+            'hover:' + hoverColor
+          } text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
           onClick={onClick}
         >
           {children}
@@ -62,6 +66,6 @@ const Button: React.FC<IButtonProps> = ({
       )}
     </>
   );
-}
+};
 
 export default Button;
