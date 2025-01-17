@@ -19,7 +19,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky",
-    "lint": "prettier . --write && eslint . --fix"
+    "lint": "prettier . --write && eslint src --fix"
   },
   "browserslist": {
     "production": [

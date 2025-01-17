@@ -5,6 +5,7 @@ import React from "react";
 
 interface IFormAreaProps {
   children: React.ReactNode;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onSubmit: (e: any) => void;
   headerHeight?: number;
   backgroundImage?: string | StaticImageData;
